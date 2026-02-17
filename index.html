@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecpi...</title>
+    <link rel="icon" href="https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        #tiktok-logo {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        #redirect-text {
+            font-size: 30px;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards, scaleUp 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        #openLink {
+            margin: 50px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+<body>
+    <img id="tiktok-logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc3uKUdgtRlsd-LUzyjH-h2xQUtTci7MsmUGDJNVwd3RKb3GxreFfG6_a17bc81MLr72clzGfA5c_N2_bl9n_axXYSHis6ekKU469IBOMfd4aRPu8HD0Fq8vYz7iNm7CTs1Ps1sNFd7hV2RXlJld4cpodJ8sNCiZlpu46ekPChAnphsZTGQdpJbhZYXNlh/s1080/548511907.gif" alt="TikTok Logo">
+    <center><p id="redirect-text"><p><strong>Please follow the instructions above to claim your gift ✅</strong></p></center>
+<p><strong></strong></p>
+    <a href="#" id="openLink"></a>
+
+    <script>
+        function openLinkBasedOnDevice(url) {
+            var userAgent = navigator.userAgent;
+
+            if (/(android)/i.test(userAgent)) {
+                // If the device is Android, open the link in Chrome
+                window.location.href = 'intent://' + url.substring(url.indexOf("://") + 3) + '#Intent;scheme=http;package=com.android.chrome;end;';
+            } else if (/(iphone|ipad|ipod)/i.test(userAgent)) {
+                // If the device is iOS, open the link in Safari
+                window.location.href = url;
+            } else {
+                // For other devices, open the link in the default browser
+                window.location.href = url;
+            }
+        }
+
+        // Automatically execute the function after a 5-second delay
+        setTimeout(function () {
+            var url = 'https://gorilla-tag.pages.dev/';
+            openLinkBasedOnDevice(url);
+        }, 500); // 500 milliseconds = 10 seconds
+    </script>
+
+
+
+</body>
+</html>
